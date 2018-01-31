@@ -1,9 +1,10 @@
 package io.spring.compositeservice.integration;
 
-import io.spring.compositeservice.domain.CardList;
-import io.spring.compositeservice.domain.Customer;
-import io.spring.compositeservice.domain.Dashboard;
-import io.spring.compositeservice.domain.OfferList;
+
+import com.example.dashboard.domain.CardList;
+import com.example.dashboard.domain.Customer;
+import com.example.dashboard.domain.Dashboard;
+import com.example.dashboard.domain.OfferList;
 import org.springframework.integration.aggregator.AbstractAggregatingMessageGroupProcessor;
 import org.springframework.integration.store.MessageGroup;
 import org.springframework.messaging.Message;

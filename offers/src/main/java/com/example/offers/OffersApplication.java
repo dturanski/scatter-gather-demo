@@ -1,7 +1,7 @@
 package com.example.offers;
 
-import io.spring.compositeservice.domain.Offer;
-import io.spring.compositeservice.domain.OfferList;
+import com.example.dashboard.domain.Offer;
+import com.example.dashboard.domain.OfferList;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;

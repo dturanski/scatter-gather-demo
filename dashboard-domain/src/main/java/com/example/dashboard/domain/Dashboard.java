@@ -1,6 +1,4 @@
-package io.spring.compositeservice.domain;
-
-import java.util.List;
+package com.example.dashboard.domain;
 
 /**
  * @author David Turanski

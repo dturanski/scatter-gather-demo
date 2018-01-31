@@ -1,4 +1,4 @@
-package io.spring.compositeservice.domain;
+package com.example.dashboard.domain;
 
 import java.util.List;
 

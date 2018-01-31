@@ -1,7 +1,8 @@
 package com.example.cardlist;
 
-import io.spring.compositeservice.domain.Card;
-import io.spring.compositeservice.domain.CardList;
+import com.example.dashboard.domain.Card;
+import com.example.dashboard.domain.CardList;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
