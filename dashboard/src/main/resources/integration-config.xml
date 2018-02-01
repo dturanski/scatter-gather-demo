@@ -1,0 +1,4 @@
+
+<aggregator xmlns="http://www.springframework.org/schema/integration"
+			input-channel="input" output-channel="output" />
+

@@ -1,6 +1,5 @@
 package com.example.dashboard.integration;
 
-import com.example.dashboard.domain.OfferList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpMethod;
@@ -9,8 +8,6 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
 import org.springframework.messaging.MessagingException;
-
-import java.lang.reflect.ParameterizedType;
 
 /**
  * @author David Turanski

@@ -2,6 +2,7 @@ package com.example.dashboard.web;
 
 import com.example.dashboard.domain.Dashboard;
 
+
 /**
  * @author David Turanski
  **/

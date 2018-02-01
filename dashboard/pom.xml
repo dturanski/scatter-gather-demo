@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>dashboard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<name>dashboard</name>
 	<description>Demo project for Spring Boot</description>
@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.10.RELEASE</version>
+		<version></version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
