@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.integration.IntegrationMessageHeaderAccessor.CORRELATION_ID;
 
 import com.example.dashboard.domain.Dashboard;
+import com.example.dashboard.domain.DashboardRequest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,21 +24,15 @@ import java.util.Collections;
 @RunWith(SpringRunner.class)
 public class IntegrationTests {
 
-	@Autowired
-	MessageChannel input;
 
 	@Autowired
-	PollableChannel aggregatorOutput;
+	DashboardService dashboardService;
 
 	@Test
 	public void testAll() {
-		Message request = MessageBuilder.withPayload("").copyHeaders(Collections.singletonMap(CORRELATION_ID,"01"))
-			.build();
-		input.send(request);
-		Message<?> response = aggregatorOutput.receive(1000);
-		assertThat(response).isNotNull();
-		assertThat(response.getPayload()).isInstanceOf(Dashboard.class);
-		Dashboard dashboard = (Dashboard)response.getPayload();
+
+		Dashboard dashboard = dashboardService.getDashboad(new DashboardRequest());
+		assertThat(dashboard).isNotNull();
 		assertThat(dashboard.getCards().getCards()).hasSize(2);
 		assertThat(dashboard.getOffers().getOffers()).hasSize(2);
 	}

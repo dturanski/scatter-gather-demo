@@ -6,10 +6,12 @@ package com.example.dashboard.integration;
 
 import com.example.dashboard.domain.CardList;
 import com.example.dashboard.domain.Dashboard;
+import com.example.dashboard.domain.DashboardRequest;
 import com.example.dashboard.domain.OfferList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.integration.annotation.Aggregator;
+import org.springframework.integration.annotation.Gateway;
 import org.springframework.integration.annotation.ReleaseStrategy;
 
 import java.util.List;
@@ -47,5 +49,6 @@ public class DashboardAggregator {
 	public boolean canRelease(List<Object> components) {
 		return components.size() == count;
 	}
+
 
 }
