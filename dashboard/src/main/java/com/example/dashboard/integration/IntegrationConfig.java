@@ -3,17 +3,12 @@ package com.example.dashboard.integration;
 import static org.springframework.integration.IntegrationMessageHeaderAccessor.CORRELATION_ID;
 
 import com.example.dashboard.domain.CardList;
-import com.example.dashboard.domain.Dashboard;
-import com.example.dashboard.domain.DashboardRequest;
 import com.example.dashboard.domain.OfferList;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.integration.annotation.Gateway;
-import org.springframework.integration.annotation.MessageEndpoint;
-import org.springframework.integration.annotation.MessagingGateway;
 import org.springframework.integration.annotation.Router;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.config.EnableIntegration;
@@ -121,6 +116,5 @@ public class IntegrationConfig {
 	public DashboardAggregator aggregator() {
 		return new DashboardAggregator(2);
 	}
-
 
 }
