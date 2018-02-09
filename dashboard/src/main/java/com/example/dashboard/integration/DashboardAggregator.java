@@ -32,6 +32,7 @@ public class DashboardAggregator {
 
 	@Aggregator(inputChannel = "aggregatorInput", outputChannel = "aggregatorOutput")
 	public Dashboard aggregate(List<Object> components) {
+
 		Dashboard dashboard = new Dashboard();
 		log.info("aggregating {} components", components.size());
 		for (Object obj : components) {

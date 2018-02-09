@@ -4,6 +4,10 @@ import com.example.dashboard.domain.Dashboard;
 import com.example.dashboard.domain.DashboardRequest;
 import org.springframework.integration.annotation.Gateway;
 import org.springframework.integration.annotation.MessagingGateway;
+import org.springframework.messaging.handler.annotation.Headers;
+import org.springframework.messaging.handler.annotation.Payload;
+
+import java.util.Map;
 
 /**
  * @author David Turanski
@@ -11,5 +15,5 @@ import org.springframework.integration.annotation.MessagingGateway;
 @MessagingGateway
 public interface DashboardService {
 	@Gateway(requestChannel = "input", replyChannel = "output")
-	Dashboard getDashboad(DashboardRequest request);
+	Dashboard getDashboad(@Payload  DashboardRequest request);
 }
